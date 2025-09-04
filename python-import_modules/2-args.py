@@ -8,10 +8,10 @@ if __name__ == "__main__":
         print(
                 "0 arguments."
                 if argc == 0
-                else "{} argument: \n{}: {}".format(argc, 1, argv[1])
+                else "{} argument:\n{}: {}".format(argc, 1, argv[1])
             )
     else:
-        print("{} arguments: \n{}: {}".format(argc, 1, argv[1]))
+        print("{} arguments:\n{}: {}".format(argc, 1, argv[1]))
 
     for i in range(2, len(argv)):
         print("{}: {}".format(i, argv[i]))
