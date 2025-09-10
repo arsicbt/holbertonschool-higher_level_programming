@@ -1,69 +1,59 @@
 # 🎓 Holberton School – Higher Level Programming
 
-Bienvenue dans mon repository Higher Level Programming ! 🚀
-Ici commence mon aventure dans le monde des langages de haut niveau : **Python 🐍**, mais aussi beaucoup d’autres concepts qui m’amèneront à penser comme une vraie software engineer.
+Bienvenue dans mon repository **Higher Level Programming** !
 
-## 🌟 Objectifs du repo
+Ici continue mon aventure dans le monde des langages de haut niveau avec : **Python 🐍**, mais aussi beaucoup d’autres concepts qui m’amèneront à **monter en compétences**.
 
-- Approfondir mes connaissances en programmation
+## 🌱 Objectifs du repo
 
-- Passer du bas niveau (C, mémoire, pointeurs…) vers un univers plus abstrait et puissant
+- Approfondir mes **connaissances en programmation**
 
-- Apprendre à résoudre des problèmes réels avec des outils modernes
+- Passer du bas niveau (C, mémoire, pointeurs…) vers un univers plus **abstrait et puissant**
 
-- Développer de bonnes pratiques de code et une vraie rigueur technique
+- Apprendre à **résoudre des problèmes** réels avec des outils modernes
+
+- Développer de **bonnes pratiques de code** et une vraie **rigueur technique**
 
 ## 📂 Contenu du repo
 
 Chaque dossier correspond à un projet ou un module spécifique :
 
-- 0x00-python-hello_world → mon premier print() en Python
+- **0x00-python-hello_world** → *print() en Python*
 
-- 0x01-python-if_else_loops_functions → conditions & boucles 🌀
+- **0x01-python-if_else_loops_functions** → *conditions & boucles 🌀*
 
-- 0x02-python-import_modules → organiser et réutiliser du code
+- **0x02-python-import_modules** → *organiser et réutiliser du code*
 
-- 0x03-python-data_structures → listes, tuples… bienvenue dans les structures !
+- **0x03-python-data_structures** → *listes, tuples… bienvenue dans les structures !*
 
 (et bien plus encore au fil de mon parcours 🔥)
-
-## 🛠️ Utilisation
-
-Pour exécuter un fichier Python :
-
-python3 nom_du_fichier.py
-
 
 **⚡ Astuce : Toujours vérifier les permissions d’exécution et respecter la PEP8 pour un code propre et lisible.**
 
 ## 💪 Motivation d’une étudiante Holberton
 
 Ce repo, c’est plus qu’un simple dossier de code.
-C’est la trace de mon évolution : chaque projet est une marche de plus vers mon objectif de devenir une développeuse complète.
+C’est la trace de mon **évolution** : chaque projet est une marche de plus vers mon objectif de devenir une **développeuse spécialisé en IA**.
 
 J’ai commencé avec un simple Hello World et je sais qu’au fil des semaines, je vais :
 
-apprendre à manipuler des algorithmes,
+1. Mieux **manipuler des algorithmes**,
 
-comprendre la programmation orientée objet,
+2. Appronfondir mes compétences en **programmation orientée objet**,
 
-toucher à la data et aux scripts d’automatisation,
+3. Continuer de toucher à la **data**,
 
-et surtout, prendre confiance en mes capacités.
+✨ et surtout, prendre confiance en mes capacités car chaque ligne de code est un petit pas de plus vers mes objectifs.
 
-✨ Chaque ligne de code est un pas de plus vers mes rêves.
+## 🎇 Contribution
 
-## 🤝 Contribution
-
-Pour l’instant, ce repo reflète mon apprentissage personnel.
+Pour l’instant, ce repo reflète mon **apprentissage personnel**.
 Mais si tu veux :
 
-- partager des tips,
+- *partager des tips*,
 
-- proposer des améliorations,
+- *proposer des améliorations*
 
-- ou juste m’encourager…
-
-➡️ Tu es le/la bienvenu(e) 🙌
+**Tu es le/la bienvenu(e)** 🙌
 
 **Arsinoé CHOBERT**
