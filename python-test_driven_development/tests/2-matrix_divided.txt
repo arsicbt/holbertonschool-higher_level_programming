@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 """
 Doctest for matrix_divided function.
 """
