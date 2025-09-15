@@ -7,6 +7,7 @@ This module defines a class Square with:
 - a public method to compute area
 """
 
+
 class Square():
     """A class that defines a square by its size.
 
