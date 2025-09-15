@@ -84,13 +84,12 @@ class Square():
         Raises:
             TypeError: If value is not a tuple of 2 positive integers.
         """
-        if (not isinstance(value, tuple) or 
-            len(value) != 2 or 
-            not all(isinstance(i, int) for i in value) or 
-            not all(i >= 0 for i in value)):
+        if (not isinstance(value, tuple) or
+                len(value) != 2 or
+                not all(isinstance(i, int) for i in value) or
+                not all(i >= 0 for i in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
-
 
     def area(self):
         """Compute and return the area of the square.
@@ -106,12 +105,12 @@ class Square():
         Otherwise, prints a square of dimensions size x size using `#`
         at the position specified by __position.
 
-        The position[1] represents vertical offset (empty lines before the square).
+        The position[1] represents vertical offset (empty lines).
         The position[0] represents horizontal offset (spaces before each line).
 
         Example:
             For a square of size 3 at position (2, 1):
-            
+
             (empty line for vertical offset)
               ###
               ###
