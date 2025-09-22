@@ -1,4 +1,4 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 """
 Module that defines a function to check if an object
 is an instance of a specified class
