@@ -16,7 +16,7 @@ class BaseGeometry:
 
     def integer_validator(self, name, value):
         """
-        Raise exeptions :  
+        Raise exeptions :
         - if value is not int
         - if value is less than or aqual to 0
         """
