@@ -1,0 +1,38 @@
+# Test file for is_same_class function
+# Following a TDD approach: describe input/output before coding
+
+==== Test 1: Basic integer ====
+Input: a = 1
+Check: is_same_class(a, int)
+Expected output: True
+
+Check: is_same_class(a, float)
+Expected output: False
+
+Check: is_same_class(a, object)
+Expected output: False
+
+==== Test 2: String ====
+Input: s = "hello"
+Check: is_same_class(s, str)
+Expected output: True
+
+Check: is_same_class(s, object)
+Expected output: False
+
+==== Test 3: Custom class ====
+Input:
+class MyClass:
+    pass
+obj = MyClass()
+
+Check: is_same_class(obj, MyClass)
+Expected output: True
+
+Check: is_same_class(obj, object)
+Expected output: False
+
+==== Test 4: Edge case - None ====
+Input: None
+Check: is_same_class(None, type(None))
+Expected output: True
