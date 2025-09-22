@@ -74,7 +74,6 @@ class BaguetteMagique:
             "coeur": self.__coeur,
             "longueur": self.__longueur
         }
-
     
     @property
     def get_proprietaire(self):
