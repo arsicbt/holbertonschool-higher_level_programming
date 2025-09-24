@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """ Learn the Duck Typing with abstract class """
 from abc import ABC, abstractmethod
-import numpy as np
 
 
 class Shape(ABC):
@@ -21,10 +20,10 @@ class Circle(Shape):
         self.radius = radius
 
     def area(self):
-        return np.pi * (self.radius ** 2)
+        return 3.14159 * (self.radius ** 2)
 
     def perimeter(self):
-        return (2 * np.pi) * self.radius
+        return (2 * 1.14159) * self.radius
 
 
 class Rectangle(Shape):
