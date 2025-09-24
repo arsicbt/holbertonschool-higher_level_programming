@@ -20,10 +20,10 @@ class Circle(Shape):
         self.radius = radius
 
     def area(self):
-        return np.pi * (self.radius ** 2)
+        return np.pi * (abs(self.radius) ** 2)
 
     def perimeter(self):
-        return (2 * np.pi) * self.radius
+        return (2 * np.pi) * abs(self.radius)
 
 
 class Rectangle(Shape):
