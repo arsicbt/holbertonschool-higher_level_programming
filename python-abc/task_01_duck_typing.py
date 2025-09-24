@@ -18,6 +18,8 @@ class Shape(ABC):
 class Circle(Shape):
     """ Concrete circle base an Shape abstract class """
     def __init__(self, radius):
+        if radius <= 0:
+            raise ValueError("Radius must be positive")
         self.radius = radius
 
     def area(self):
@@ -30,6 +32,8 @@ class Circle(Shape):
 class Rectangle(Shape):
     """ Concrete rectangle base an Shape abstract class """
     def __init__(self, width, height):
+        if width <= 0 or height <= 0:
+            raise ValueError("Width and height must be positive")
         self.width = width
         self.height = height
 
@@ -42,5 +46,8 @@ class Rectangle(Shape):
 
 def shape_info(self):
     """ Print the area and the perimeter of created shape """
-    print(f"Area: {self.area()}")
-    print(f"Perimeter: {self.perimeter()}")
+    try:
+        print(f"Area: {self.area()}")
+        print(f"Perimeter: {self.perimeter()}")
+    except ZeroDivisionError:
+        print("Error: division by zero occured")
