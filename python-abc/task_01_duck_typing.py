@@ -37,13 +37,10 @@ class Rectangle(Shape):
         return self.width * self.height
 
     def perimeter(self):
-        return (self.width + self.height) * 2
+        return 2 * (self.width + self.height)
 
 
 def shape_info(shape):
     """ Print the area and the perimeter of created shape """
-    try:
-        print(f"Area: {shape.area()}")
-        print(f"Perimeter: {shape.perimeter()}")
-    except ZeroDivisionError:
-        print("Error: division by zero occured")
+    print(f"Area: {shape.area()}")
+    print(f"Perimeter: {shape.perimeter()}")
