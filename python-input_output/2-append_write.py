@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-""" 
-Module --> Countain a function that appends 
-a string at the end of a text file 
+"""
+Module --> Countain a function that appends
+a string at the end of a text file
 """
 
 
