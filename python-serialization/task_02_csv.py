@@ -12,16 +12,22 @@ import json
 def convert_csv_to_json(filename):
     """ Convert CSV file to JSON """
 
-    csvfile = open(filename, 'r')
-    jsonfile = open(filename, 'w')
+    if filename.endswith('.csv'):
+        json_filename = filename.replace('.csv', '.json')
+    else:
+        json_filename = filename + '.json'
 
     try:
-        reader = csv.DictReader(csvfile, filename)
-        for row in reader:
-            json.dump(row, jsonfile)
-            jsonfile.write('\n')
+        with open(filename, 'r') as csvfile:
+            reader = csv.DictReader(csvfile)
+            
+            with open(json_filename, 'w') as jsonfile:
+                for row in reader:
+                    json.dump(row, jsonfile)
+                    jsonfile.write('\n')
+        
         return True
 
     except FileNotFoundError:
-        raise FileNotFoundError(f"Error: File '{filename}' not found")
+        print(f"Error: File '{filename}' not found")
         return False
