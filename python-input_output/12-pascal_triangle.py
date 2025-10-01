@@ -7,6 +7,7 @@ Pascal s triangle of n
 
 
 def ligne_suivante(ligne):
+    """ Return the next ligne of Pascal's triangle """
 
     ligne_suiv = [1]
     for i in range(len(ligne) - 1):
@@ -18,6 +19,7 @@ def ligne_suivante(ligne):
 
 
 def pascal_triangle(n):
+    """ Return the Pascal's triangle of n height """
 
     if n <= 0:
         return []
