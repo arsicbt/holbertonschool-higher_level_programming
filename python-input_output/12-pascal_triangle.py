@@ -10,7 +10,7 @@ def ligne_suivante(ligne):
 
     ligne_suiv = [1]
     for i in range(len(ligne) - 1):
-        ligne_suiv.append(ligne[1] + ligne[i + 1])
+        ligne_suiv.append(ligne[i] + ligne[i + 1])
 
     ligne_suiv.append(1)
 
