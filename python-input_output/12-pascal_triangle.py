@@ -16,12 +16,13 @@ def ligne_suivante(ligne):
 
     return ligne_suiv
 
+
 def pascal_triangle(n):
 
     if n <= 0:
         return []
 
-    triangle = [ [1] ]
+    triangle = [[1]]
     for k in range(n - 1):
         ligne_k = ligne_suivante(triangle[k])
         triangle.append(ligne_k)
