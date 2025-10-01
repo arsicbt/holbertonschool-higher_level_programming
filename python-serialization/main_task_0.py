@@ -2,11 +2,7 @@
 from task_00_basic_serialization import load_and_deserialize, serialize_and_save_to_file
 
 # Sample data to be serialized
-data_to_serialize = {
-    "name": "Arsinoé",
-    "age": 19,
-    "city": "Rennes"
-}
+data_to_serialize = {1, 2, 3}
 
 # Serialize the data to JSON and save it to a file
 serialize_and_save_to_file(data_to_serialize, 'data.json')

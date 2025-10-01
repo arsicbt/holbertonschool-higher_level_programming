@@ -16,8 +16,8 @@ def serialize_and_save_to_file(data, filename):
             json.dump(data, f)
         return True
 
-    except TypeError as error:
-        print(f"Serialization error: {error}")
+    except (TypeError) as error:
+        raise TypeError(f"Serialization error {error}")
         return False
 
 
