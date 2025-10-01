@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-import json
 """
 Basic serialization module for Python dictionaries
 Provides functionality to serialize to JSON and deserialize from JSON
 """
+
+
+import json
 
 
 def serialize_and_save_to_file(data, filename):
