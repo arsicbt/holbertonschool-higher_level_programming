@@ -14,9 +14,6 @@ def fetch_and_print_posts():
         for posts in posts:
             print(posts['title'])
 
-        print()
-
-
 
 def fetch_and_save_posts():
 
@@ -26,9 +23,11 @@ def fetch_and_save_posts():
         posts = response_post.json()
 
         clean_posts = [
-                {'id': post['id'], 'title': post['title'], 'body': post['body']}
+                {'id': post['id'],
+                    'title': post['title'],
+                    'body': post['body']}
                 for post in posts
-            ]
+                ]
 
         with open('response_post', 'w', encoding='utf-8') as file:
 
