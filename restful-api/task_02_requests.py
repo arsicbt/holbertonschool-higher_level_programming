@@ -7,7 +7,7 @@ import csv
 
 def fetch_and_print_posts():
     response_get = requests.get('https://jsonplaceholder.typicode.com/posts')
-    print("Status code:", response_get.status_code)
+    print("Status Code:", response_get.status_code)
 
     if response_get.status_code == 200:
         posts = response_get.json()
@@ -27,11 +27,9 @@ def fetch_and_save_posts():
         posts = response_post.json()
 
         clean_posts = [
-                {'id': post['id'],
-                    'title': post['title'],
-                    'body': post['body']}
-                for post in posts
-                ]
+            {'id': post['id'], 'title': post['title'], 'body': post['body']}
+            for post in posts
+        ]
 
         with open('posts.csv', 'w', newline='', encoding='utf-8') as f:
 
@@ -40,6 +38,5 @@ def fetch_and_save_posts():
             writer.writeheader()
             writer.writerows(clean_posts)
 
-        print("All done! CSV file sucessfully created")
     else:
-        print("Erreur HTTP:", response_post.status_code)
+        print("Error")
