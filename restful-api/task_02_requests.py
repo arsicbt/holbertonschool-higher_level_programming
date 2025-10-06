@@ -14,6 +14,10 @@ def fetch_and_print_posts():
         for posts in posts:
             print(posts['title'])
 
+        print("All done !")
+    else:
+        print("Error")
+
 
 def fetch_and_save_posts():
 
