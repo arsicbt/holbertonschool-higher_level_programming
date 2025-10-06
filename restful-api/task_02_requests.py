@@ -14,7 +14,7 @@ def fetch_and_print_posts():
         for post in posts:
             print(post['title'])
 
-        print("All done !")
+        print("All done!")
     else:
         print("Error")
 
@@ -33,13 +33,13 @@ def fetch_and_save_posts():
                 for post in posts
                 ]
 
-        with open('response_post.csv', 'w', newline='', encoding='utf-8') as f:
+        with open('posts.csv', 'w', newline='', encoding='utf-8') as f:
 
             field = ['id', 'title', 'body']
             writer = csv.DictWriter(f, fieldnames=field)
             writer.writeheader()
             writer.writerows(clean_posts)
 
-        print("All done ! CSV file sucessfully created")
+        print("All done! CSV file sucessfully created")
     else:
-        print("Erreur HTTP :", response_post.status_code)
+        print("Erreur HTTP:", response_post.status_code)
