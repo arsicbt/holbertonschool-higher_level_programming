@@ -14,6 +14,8 @@ def fetch_and_print_posts():
         for posts in posts:
             print(posts['title'])
 
+        print()
+
 
 
 def fetch_and_save_posts():
@@ -35,6 +37,6 @@ def fetch_and_save_posts():
             writer.writeheader()
             writer.writerows(clean_posts)
 
-        print("All done !")
-    else : 
-        print("Error")
+        print("All done ! CSV file sucessfully created")
+    else:
+        print("Erreur HTTP :", response.status_code)
