@@ -33,13 +33,13 @@ def fetch_and_save_posts():
                 for post in posts
                 ]
 
-        with open('response_post.csv', 'w', encoding='utf-8') as file:
+        with open('response_post.csv', 'w', newline='', encoding='utf-8') as f:
 
             field = ['id', 'title', 'body']
-            writer = csv.DictWriter(file, fieldnames=field)
+            writer = csv.DictWriter(f, fieldnames=field)
             writer.writeheader()
             writer.writerows(clean_posts)
 
         print("All done ! CSV file sucessfully created")
     else:
-        print("Erreur HTTP :", response.status_code)
+        print("Erreur HTTP :", response_post.status_code)
