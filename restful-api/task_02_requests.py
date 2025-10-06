@@ -23,14 +23,18 @@ def fetch_and_save_posts():
     if response_post.status_code == 200:
         posts = response_post.json()
 
-    clean_posts = [
-            {'id': post['id'], 'title': post['title'], 'body': post['body']}
-            for post in posts
-        ]
+        clean_posts = [
+                {'id': post['id'], 'title': post['title'], 'body': post['body']}
+                for post in posts
+            ]
 
-    with open('response_post', 'w', encoding='utf-8') as file:
+        with open('response_post', 'w', encoding='utf-8') as file:
 
-        field = ['id', 'title', 'body']
-        writer = csv.DictWriter(file, fieldnames=field)
-        writer.writeheader()
-        writer.writerows(clean_posts)
+            field = ['id', 'title', 'body']
+            writer = csv.DictWriter(file, fieldnames=field)
+            writer.writeheader()
+            writer.writerows(clean_posts)
+
+        print("All done !")
+    else : 
+        print("Error")
