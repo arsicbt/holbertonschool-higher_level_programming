@@ -33,7 +33,7 @@ def fetch_and_save_posts():
                 for post in posts
                 ]
 
-        with open('response_post', 'w', encoding='utf-8') as file:
+        with open('response_post.csv', 'w', encoding='utf-8') as file:
 
             field = ['id', 'title', 'body']
             writer = csv.DictWriter(file, fieldnames=field)
