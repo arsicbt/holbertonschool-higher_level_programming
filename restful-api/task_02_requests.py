@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 
-import requests, csv
+import requests
+import csv
 
 
 def fetch_and_print_posts():
@@ -14,6 +15,7 @@ def fetch_and_print_posts():
         print(result)
     return response_get
 
+
 def fetch_and_save_posts():
 
     response_post = fetch_and_print_posts()
@@ -22,10 +24,8 @@ def fetch_and_save_posts():
         posts = response_post.json()
 
     with open('response_post', 'w', encoding='utf-8') as file:
-        # Define the columns from the key of the first post
+
         field = posts[0].keys()
         writer = csv.DictWriter(file, fieldnames=field)
-
-        writer.writeheader() # Print the column
-        writer.writerows(posts)  # Print the lines
-
+        writer.writeheader()
+        writer.writerows(posts)
