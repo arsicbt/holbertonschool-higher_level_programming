@@ -39,7 +39,8 @@ class MiniServer(BaseHTTPRequestHandler):
         # /info endpoint
         if self.path == '/info':
             self._set_headers(200, "application/json")
-            info = {"version": "1.0", "descr": "Mini API with http.server"}
+            info = {"version": "1.0", "description":
+                    "A simple API built with http.server"}
             self.wfile.write(json.dumps(info).encode('utf-8'))
             return
 
