@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import http.server
 
 
 from http.server import BaseHTTPRequestHandler, HTTPServer
@@ -20,9 +19,6 @@ class MiniServer(BaseHTTPRequestHandler):
         if self.path == '/' or self.path == '':
             self._set_headers(200, "text/plain")
             message = "Hello, this is a simple API!"
-            self.wfile.write(message.encode('utf-8'))
-            return
-
         # /data endpoint
         if self.path == '/data':
             self._set_headers(200, "application/json")
@@ -61,18 +57,6 @@ def run(server_class=HTTPServer, handler_class=MiniServer, port=8000):
         print("\nServer shutting down.")
         httpd.server_close()
 
-def test():
-
-    import requests
-
-    base_url = "http://localhost:8000"
-
-    for path in ["/", "/data", "/status", "/unknown"]:
-        response = requests.get(base_url + path)
-        print(f"GET {path} - {response.status_code}")
-        print(response.text)
-
 
 if __name__ == "__main__":
     run()
-    test()
