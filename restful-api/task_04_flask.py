@@ -18,7 +18,7 @@ def home():
 
 @app.route('/data')
 def data():
-    user_id = [i['id'] for i in users]
+    user_id = [i['username'] for i in users]
     extract_id = jsonify(user_id)
     return extract_id
 
