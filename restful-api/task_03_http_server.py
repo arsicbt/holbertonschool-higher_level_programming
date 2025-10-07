@@ -9,13 +9,13 @@ import json
 class MiniServer(BaseHTTPRequestHandler):
 
     def _set_headers(self, status_code=200, content_type="application/json"):
-        """Utilitaire pour envoyer les en-têtes HTTP de réponse"""
+        """Là c'est utilitaire pour envoyer les en têtes HTTP de réponse"""
         self.send_response(status_code)
         self.send_header('Types', content_type)
         self.end_headers()
 
     def do_GET(self):
-        """Gérer les requêtes GET selon le chemin (self.path)"""
+        """Ici je gère les requêtes GET selon le chemin (self.path)"""
         # Root
         if self.path == '/' or self.path == '':
             self._set_headers(200, "text/plain")
@@ -61,6 +61,18 @@ def run(server_class=HTTPServer, handler_class=MiniServer, port=8000):
         print("\nServer shutting down.")
         httpd.server_close()
 
+def test():
+
+    import requests
+
+    base_url = "http://localhost:8000"
+
+    for path in ["/", "/data", "/status", "/unknown"]:
+        response = requests.get(base_url + path)
+        print(f"GET {path} - {response.status_code}")
+        print(response.text)
+
 
 if __name__ == "__main__":
     run()
+    test()
