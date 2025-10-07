@@ -19,6 +19,9 @@ class MiniServer(BaseHTTPRequestHandler):
         if self.path == '/' or self.path == '':
             self._set_headers(200, "text/plain")
             message = "Hello, this is a simple API!"
+            self.wfile.write(message.encode('utf-8'))
+            return
+
         # /data endpoint
         if self.path == '/data':
             self._set_headers(200, "application/json")
