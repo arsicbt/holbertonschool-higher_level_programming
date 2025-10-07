@@ -5,9 +5,8 @@ from flask import Flask, jsonify, request
 app = Flask(__name__)
 
 users = [
-    {"username": 1, "name": "khalil"},
-    {"username": 2, "name": "arsinoe"},
-    {"username": 3, "name": "philemon"}
+    {"jane": {"username": "jane", "name": "Jane", "age": 28, "city": "Los Angeles"},
+    "john": {"username": "john", "name": "John", "age": 30, "city": "New York"}}
 ]
 
 # décorateur qui associe une URL à une fonction
