@@ -11,7 +11,7 @@ class MiniServer(BaseHTTPRequestHandler):
     def _set_headers(self, status_code=200, content_type="application/json"):
         """Là c'est utilitaire pour envoyer les en têtes HTTP de réponse"""
         self.send_response(status_code)
-        self.send_header('Types', content_type)
+        self.send_header('Content-type', content_type)
         self.end_headers()
 
     def do_GET(self):
