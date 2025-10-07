@@ -27,19 +27,19 @@ class MiniServer(BaseHTTPRequestHandler):
             return
 
         # /data endpoint
-        if self.path == '/data':
+        elif self.path == '/data':
             data = {"name": "John", "age": 30, "city": "New York"}
             self._send_json(data)
             return
 
         # /status endpoint
-        if self.path == '/status':
+        elif self.path == '/status':
             self._set_headers(200, "text/plain")
             self.wfile.write(b"OK")
             return
 
         # /info endpoint
-        if self.path == '/info':
+        elif self.path == '/info':
             info = {
                 "version": "1.0",
                 "description": "A simple API built with http.server"
