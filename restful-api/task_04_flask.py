@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, abort
 app = Flask(__name__)
 
 users = {
@@ -48,9 +48,9 @@ def add_user():
     
     users[username] = {
         "username": username,
-        "name": data.get("name", ""),
-        "age": data.get("age", 0),
-        "city": data.get("city", "")
+        "name": new_user_data.get("name", ""),
+        "age": new_user_data.get("age", 0),
+        "city": new_user_data.get("city", "")
     }
     
     return jsonify({"message": "User added"}), 201
