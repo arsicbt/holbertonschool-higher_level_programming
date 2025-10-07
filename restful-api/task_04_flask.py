@@ -11,3 +11,6 @@ def home():
     msg = "Welcome to the Flask API!"
     return msg
 
+if __name__ == "__main__": 
+    app.run()
+
