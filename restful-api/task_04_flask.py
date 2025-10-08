@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 from flask import Flask, jsonify, request
-app = Flask(__name__)
 
+app = Flask(__name__)
 
 users = {}
 
@@ -31,7 +31,7 @@ def get_user(username):
 
 @app.route("/add_user", methods=["POST"])
 def add_user():
-    new_usr_data = request.json()
+    new_usr_data = request.get_json()
 
     # username required
     if new_usr_data is None or "username" not in new_usr_data:
@@ -39,7 +39,7 @@ def add_user():
 
     username = new_usr_data["username"]
     if username in users:
-        return jsonify({"error": "Username already exists"}), 400
+        return jsonify({"error": "Username already exists"}), 409
 
     users[username] = {
         "username": username,
@@ -55,4 +55,4 @@ def add_user():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
