@@ -1,9 +1,3 @@
--- Creates the database if it doesn't exist
-CREATE DATABASE IF NOT EXISTS hbtn_0c_0;
-
--- Use the database
-USE hbtn_0c_0;
-
 -- Create a new table in the database and add muliples rows
 CREATE TABLE IF  NOT EXISTS second_table (
     id INT,
