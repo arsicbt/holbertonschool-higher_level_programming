@@ -7,7 +7,6 @@ CREATE USER IF NOT EXISTS 'user_0d_2'@'localhost';
 -- Allows privileges with grant
 GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost';
 GRANT ALL PRIVILEGES ON *.* TO 'user_0d_2'@'localhost';
-FLUSH PRIVILEGES;
 
 -- Show privileges
 SHOW GRANTS FOR 'user_0d_1'@'localhost';
