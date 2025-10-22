@@ -1,4 +1,4 @@
--- Creates DB 'hbtn_od_2'
+-- Creates DB 'hbtn_0d_2'
 CREATE DATABASE IF NOT EXISTS hbtn_0d_2;
 
 -- Creates user with password
