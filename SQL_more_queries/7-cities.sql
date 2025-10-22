@@ -2,7 +2,7 @@
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
 
 -- Use this DB
-USE hbtn_0d_usa
+USE hbtn_0d_usa;
 
 -- Create a table cities in the new DB 
 CREATE TABLE IF NOT EXISTS cities (
@@ -11,5 +11,5 @@ CREATE TABLE IF NOT EXISTS cities (
     name VARCHAR(256) NOT NULL,
     PRIMARY KEY (id),
     CONSTRAINT foreign_k_state
-        FOREIGN KEY (state_id) REFERENCES state(id)
+        FOREIGN KEY (state_id) REFERENCES states(id)
 );
