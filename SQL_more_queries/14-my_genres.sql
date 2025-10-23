@@ -1,0 +1,1 @@
+-- Utiliser la DB pour lister tous les genres du show Dexter
