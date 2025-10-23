@@ -3,8 +3,10 @@
 Lists all states of the DB
 """
 
+
 import sys
 import MySQLdb
+
 
 def list_states():
     """Lists states ordered by id"""
@@ -14,7 +16,7 @@ def list_states():
     database = sys.argv[3]
 
     # Conection to DB
-    db  = MySQLdb.connect(
+    db = MySQLdb.connect(
         host='Localhost',
         port=3306,
         user=username,
@@ -36,6 +38,7 @@ def list_states():
     # Close the cursor and connection
     cursor.close()
     db.close()
+
 
 if __name__ == "__main__":
     list_states()
