@@ -30,12 +30,12 @@ def list_states():
     # SQL requests
     cursor.execute("SELECT * FROM states ORDER by id ASC")
 
-    # Keep and display the result
+    # Keeps and displays the result
     rows = cursor.fetchall()
     for row in rows:
         print(row)
 
-    # Close the cursor and connection
+    # Closes the cursor and connection
     cursor.close()
     db.close()
 
