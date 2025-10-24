@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """ Lists cities by state into the DB """
 
 import sys
@@ -11,6 +11,7 @@ def list_cities_by_states():
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
+    searched = sys.argv[4]
 
     # Connection to DB
     db = MySQLdb.connect(
@@ -26,17 +27,17 @@ def list_cities_by_states():
 
     # SQL query
     cursor.execute("""
-        SELECT cities.id, cities.name
+        SELECT DISTINCT cities.name
         FROM cities
         JOIN states ON cities.state_id = states.id
         WHERE states.name = %s
-        ORDER BY cities.id ASC
-    """, (state_name,))
+        ORDER BY cities.name ASC
+    """, (searched,))
 
     # Display results
     rows = cursor.fetchall()
-    for row in rows:
-        print(row)
+    cities = [row[0] for row in rows]
+    print(", ".join(cities))
 
     # Close cursor and connection
     cursor.close()
