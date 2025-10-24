@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Modules that takes in an argument and displays all values in the states table """
+""" Safe version, SQL injections friendly """
 
 import sys
 import MySQLdb
@@ -25,7 +25,7 @@ def safe_version():
     # Cursor to execute queries
     cursor = db.cursor()
 
-    # SQL query 
+    # SQL query
     query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
     cursor.execute(query, (searched,))
 
