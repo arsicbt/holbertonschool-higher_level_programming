@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """ Lists cities from DB """
 
 import sys
@@ -25,7 +25,12 @@ def list_cities():
     cursor = db.cursor()
 
     # SQL query
-    cursor.execute("SELECT * FROM cities ORDER BY id ASC")
+    cursor.execute("""
+        SELECT cities.id, cities.name, states.name 
+        FROM cities 
+        JOIN states ON cities.state_id = states.id 
+        ORDER BY cities.id ASC
+    """)
 
     # Display results
     rows = cursor.fetchall()
