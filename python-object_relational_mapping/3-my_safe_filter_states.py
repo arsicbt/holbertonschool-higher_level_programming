@@ -5,7 +5,7 @@ import sys
 import MySQLdb
 
 
-def list_states_safe():
+def safe_version():
     """Connects to a MySQL database and lists all states ordered by id."""
     # Keep arguments
     username = sys.argv[1]
@@ -26,8 +26,8 @@ def list_states_safe():
     cursor = db.cursor()
 
     # SQL query 
-    cursor.execute("SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(searched))
-
+    query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
+    cursor.execute(query, (searched,))
 
     # Display results
     rows = cursor.fetchall()
@@ -40,4 +40,4 @@ def list_states_safe():
 
 
 if __name__ == "__main__":
-    list_states_N()
+    safe_version()
