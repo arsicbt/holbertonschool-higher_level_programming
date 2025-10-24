@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/python3
 """ Modules that lists all states starting with N """
 
 import sys
