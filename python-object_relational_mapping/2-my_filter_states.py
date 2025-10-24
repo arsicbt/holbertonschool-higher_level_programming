@@ -1,4 +1,4 @@
-#!/bin/env python3
+#!/usr/bin/python3
 """ Modules that takes in an argument and displays all values in the states table """
 
 import sys
