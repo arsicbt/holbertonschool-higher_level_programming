@@ -1,5 +1,5 @@
-#!/usr/bin/python3
-""" Modules that lists all states starting with N """
+#!/bin/env python3
+""" Modules that takes in an argument and displays all values in the states table """
 
 import sys
 import MySQLdb
@@ -25,14 +25,9 @@ def list_states_N():
     # Cursor to execute queries
     cursor = db.cursor()
 
-    # SQL query
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
+    # SQL query 
+    cursor.execute("SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(searched))
 
-    # Sorts only states starting with 'N'
-    cursor.execute(
-        "SELECT * FROM states WHERE name LIKE %s ORDER BY id ASC",
-        ('N%',)
-    )
 
     # Display results
     rows = cursor.fetchall()
