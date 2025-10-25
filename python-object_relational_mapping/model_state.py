@@ -1,41 +1,27 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
-Module qui liste tous les états en utilisant SQLAlchemy ORM
+Définition du modèle State avec SQLAlchemy
+Représente la table 'states' dans la base de données
 """
 
-import sys
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from model_state import Base, State
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
+
+# Création de la classe de base pour tous les modèles
+Base = declarative_base()
 
 
-def list_states():
-    """Liste tous les états triés par id en utilisant SQLAlchemy"""
-    # Récupération des arguments
-    username = sys.argv[1]
-    password = sys.argv[2]
-    database = sys.argv[3]
+class State(Base):
+    """
+    Classe State qui représente la table 'states'
     
-    # Création de la connexion à la base de données
-    engine = create_engine(
-        f'mysql+mysqldb://{username}:{password}@localhost:3306/{database}',
-        pool_pre_ping=True
-    )
+    Attributes:
+        id (int): Clé primaire auto-incrémentée
+        name (str): Nom de l'état (max 128 caractères)
+    """
+    # Nom de la table dans la base de données
+    __tablename__ = 'states'
     
-    # Création d'une session pour interagir avec la base
-    Session = sessionmaker(bind=engine)
-    session = Session()
-    
-    # Requête ORM (équivalent de: SELECT * FROM states ORDER BY id ASC)
-    states = session.query(State).order_by(State.id).all()
-    
-    # Affichage des résultats
-    for state in states:
-        print(f"{state.id}: {state.name}")
-    
-    # Fermeture de la session
-    session.close()
-
-
-if __name__ == "__main__":
-    list_states()
+    # Colonnes de la table
+    id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
+    name = Column(String(128), nullable=False)
