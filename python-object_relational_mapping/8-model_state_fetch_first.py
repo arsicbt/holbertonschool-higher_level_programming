@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Lists the first State object from the database hbtn_0e_6_usa
 """
