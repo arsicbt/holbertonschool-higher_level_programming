@@ -28,18 +28,19 @@ def list_states_N():
     )
 
     # Create a cursor
-    cursor = db.cursor()
+    c = db.cursor()
 
     # Execute query to fetch states starting with 'N'
-    cursor.execute("SELECT * FROM states WHERE name LIKE %s ORDER BY id ASC", ('N%',))
+    c.execute("SELECT * FROM states WHERE\
+                name LIKE %s ORDER BY id ASC", ('N%',))
 
     # Fetch and display results
-    rows = cursor.fetchall()
+    rows = c.fetchall()
     for row in rows:
         print(row)
 
     # Close cursor and connection
-    cursor.close()
+    c.close()
     db.close()
 
 
