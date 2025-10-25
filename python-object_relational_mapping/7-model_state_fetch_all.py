@@ -10,14 +10,15 @@ from model_state import Base, State
 
 
 def list_states():
-    """Connects to the database and lists all State objects"""
+    """Connects to the database and lists all State"""
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
 
     # Connect to MySQL using SQLAlchemy
     engine = create_engine(
-        f'mysql+mysqldb://{username}:{password}@localhost:3306/{database}',
+        f'mysql+mysqldb://{username}:\
+        {password}@localhost:3306/{database}',
         pool_pre_ping=True
     )
 
