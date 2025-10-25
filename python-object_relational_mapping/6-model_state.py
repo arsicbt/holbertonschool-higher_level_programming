@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Script qui liste tous les états"""
 import sys
 from sqlalchemy import create_engine

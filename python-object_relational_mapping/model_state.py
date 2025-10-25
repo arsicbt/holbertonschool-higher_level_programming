@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Définition du modèle State avec SQLAlchemy
 Représente la table 'states' dans la base de données
