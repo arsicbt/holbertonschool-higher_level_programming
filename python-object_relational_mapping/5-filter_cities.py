@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """ Lists cities by state into the DB """
 
 import sys
@@ -27,11 +27,11 @@ def list_cities_by_states():
 
     # SQL query
     cursor.execute("""
-        SELECT DISTINCT cities.name
+        SELECT cities.name
         FROM cities
         JOIN states ON cities.state_id = states.id
         WHERE states.name = %s
-        ORDER BY cities.name ASC
+        ORDER BY cities.id ASC
     """, (searched,))
 
     # Display results
