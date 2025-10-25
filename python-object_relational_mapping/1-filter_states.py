@@ -31,8 +31,8 @@ def list_states_N():
     c = db.cursor()
 
     # Execute query to fetch states starting with 'N'
-    c.execute("SELECT * FROM states WHERE\
-                name LIKE %s ORDER BY id ASC", ('N%',))
+    c.execute("SELECT * FROM states WHERE BINARY name\
+                LIKE 'N%' ORDER BY id ASC")
 
     # Fetch and display results
     rows = c.fetchall()
