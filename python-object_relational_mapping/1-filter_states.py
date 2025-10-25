@@ -1,19 +1,24 @@
 #!/usr/bin/python3
-""" Modules that lists all states starting with N """
+"""
+Lists all states from the database hbtn_0e_0_usa
+where name starts with 'N' (upper N), sorted by id.
+"""
 
 import sys
 import MySQLdb
 
 
 def list_states_N():
-    """Connects to a MySQL database and lists all states ordered by id."""
-    # Keep arguments
+    """
+    Connects to the MySQL database and prints all states
+    whose name starts with 'N', ordered by states.id.
+    """
+    # Arguments
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
-    searched = sys.argv[4]
 
-    # Connection to DB
+    # Connect to database
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -22,19 +27,13 @@ def list_states_N():
         db=database
     )
 
-    # Cursor to execute queries
+    # Create a cursor
     cursor = db.cursor()
 
-    # SQL query
-    cursor.execute("SELECT * FROM states ORDER BY id ASC")
+    # Execute query to fetch states starting with 'N'
+    cursor.execute("SELECT * FROM states WHERE name LIKE %s ORDER BY id ASC", ('N%',))
 
-    # Sorts only states starting with 'N'
-    cursor.execute(
-        "SELECT * FROM states WHERE name LIKE %s ORDER BY id ASC",
-        ('N%',)
-    )
-
-    # Display results
+    # Fetch and display results
     rows = cursor.fetchall()
     for row in rows:
         print(row)
