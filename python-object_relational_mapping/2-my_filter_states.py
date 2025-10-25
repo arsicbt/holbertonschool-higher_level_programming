@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-""" Modules that takes in an argument and displays all values in the states table """
+"""
+Modules that takes in an argument and
+displays all values in the states table
+"""
 
 import sys
 import MySQLdb
@@ -25,9 +28,9 @@ def list_states_safe():
     # Cursor to execute queries
     cursor = db.cursor()
 
-    # SQL query 
-    cursor.execute("SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(searched))
-
+    # SQL query
+    cursor.execute("SELECT * FROM states\
+                WHERE name = '{}' ORDER BY id ASC".format(searched))
 
     # Display results
     rows = cursor.fetchall()
@@ -40,4 +43,4 @@ def list_states_safe():
 
 
 if __name__ == "__main__":
-    list_states_N()
+    list_states_safe()
