@@ -30,7 +30,7 @@ def list_states_safe():
 
     # SQL query
     cursor.execute("SELECT * FROM states\
-                WHERE name = '{}' ORDER BY id ASC".format(searched))
+                WHERE BINARY name = '{}' ORDER BY id ASC".format(searched))
 
     # Display results
     rows = cursor.fetchall()
