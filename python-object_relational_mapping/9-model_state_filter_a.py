@@ -25,17 +25,17 @@ def list_states_with_a():
 
     # Create a configured session
     Session = sessionmaker(bind=engine)
-    session = Session()
+    s = Session()
 
     # Query states containing 'a', ordered by id
-    states = session.query(State).filter(State.name.like('%a%')).order_by(State.id).all()
+    st = s.query(State).filter(State.name.like('%a%')).order_by(State.id).all()
 
     # Display results
-    for state in states:
+    for state in st:
         print(f"{state.id}: {state.name}")
 
     # Close session
-    session.close()
+    s.close()
 
 
 if __name__ == "__main__":
