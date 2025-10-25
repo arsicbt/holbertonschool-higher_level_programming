@@ -1,9 +1,7 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Changes the name of the State object with id = 2 to "New Mexico"
 in the database hbtn_0e_6_usa.
-
-Usage: ./12-model_state_update_id_2.py <mysql_username> <mysql_password> <database_name>
 """
 
 import sys
