@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Lists all City objects from the database hbtn_0e_14_usa,
 sorted by cities.id in ascending order.
