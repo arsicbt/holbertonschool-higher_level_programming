@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
   toggleDiv.addEventListener('click', function () { // Ecoute du clic
     if (header.classList.contains('red')) { // Passer du rouge au vert
       header.classList.replace('red', 'green');
-    } else if (header.classList.countains('green')) { // Passer du vert au rouge (reverse)
+    } else if (header.classList.contains('green')) { // Passer du vert au rouge (reverse)
       header.classList.replace('green', 'red');
     } else { // edge case (aucune class presente)
       header.classList.add('red');
