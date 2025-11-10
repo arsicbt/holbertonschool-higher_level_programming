@@ -31,11 +31,11 @@ def generate_invitations(template, attendees):
     for idx, attendee in enumerate(attendees, start=1):
         invit = template
         invit = invit.replace("{name}", str(attendee.get("name") or "N/A"))
-        invit = invit.replace("{ev_title}",
+        invit = invit.replace("{event_title}",
                               str(attendee.get("event_title") or "N/A"))
-        invit = invit.replace("{ev_date}",
+        invit = invit.replace("{event_date}",
                               str(attendee.get("event_date") or "N/A"))
-        invit = invit.replace("{ev_location}",
+        invit = invit.replace("{event_location}",
                               str(attendee.get("event_location") or "N/A"))
 
         # Generate output file
