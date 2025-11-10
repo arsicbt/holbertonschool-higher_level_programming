@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 // Chargement du DOM
-document.addEventListener('DMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
   const addButton = document.querySelector('#add_item'); // Je recupere le buton
   const myList = document.querySelector('.my_list'); // Et la liste
 
