@@ -51,7 +51,7 @@ def show_products():
         if source == 'json': 
             with open('products.json') as f:
                 data = json.load(f)
-                product_list = data.get('items', [])
+                product_list = data.get('products', [])
         # ----------- CSV -----------
         elif source == 'csv':
             with open('products.csv', newline='') as f:
