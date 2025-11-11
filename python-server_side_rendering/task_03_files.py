@@ -50,8 +50,8 @@ def show_products():
         # ----------- JSON -----------
         if source == 'json': 
             with open('products.json') as f:
-                data = json.load(f)
-                product_list = data.get('products', [])
+                product_list = json.load(f)
+
         # ----------- CSV -----------
         elif source == 'csv':
             with open('products.csv', newline='') as f:
@@ -65,10 +65,10 @@ def show_products():
                         "price": float(row.get('price', 0))
                     })
         else:
-            error = f"Wrong source '{source}'. Use 'json' or 'csv'."
+            error = f"Wrong source"
 
     except FileNotFoundError:
-        error = f"File for source '{source}' not found."
+        error = f"Product not found"
 
     # Filtrage par id
     if not error and product_id:
