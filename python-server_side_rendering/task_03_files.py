@@ -76,7 +76,7 @@ def show_products():
         if filtered:
             product_list = filtered
         else:
-            error = f"Product with id={product_id} not found."
+            error = f"Product not found"
 
     return render_template('product_display.html', products=product_list, error=error)
 
