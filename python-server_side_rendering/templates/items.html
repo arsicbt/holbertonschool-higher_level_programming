@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Items List</title>
+</head>
+<body>
+    {% include 'header.html' %}
+
+    <h1>Items List</h1>
+
+    {% if items %}
+        <ul>
+        <!-- Boucle sur les element du tab -->
+        {% for item in items %}
+            <li>{{ item }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No items found.</p>
+    {% endif %}
+
+    {% include 'footer.html' %}
+</body>
+</html>
+
+<!-- Equivalent de la boucle en Py :
+ for item in ["Python Book", "Flask Mug", "Jinja Sticker"]:
+    print(f"<li>{item}</li>")
+-->
