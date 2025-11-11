@@ -59,10 +59,10 @@ def show_products():
                 product_list = []
                 for row in reader:
                     product_list.append({
-                        "id": int(row['id']),
-                        "name": row['name'],
-                        "category": row['category'],
-                        "price": float(row['price'])
+                        "id": int(row.get('id', 0)),
+                        "name": row.get('name', 'Unknown'),
+                        "category": row.get('category', 'N/A'),
+                        "price": float(row.get('price', 0))
                     })
         else:
             error = f"Wrong source '{source}'. Use 'json' or 'csv'."
