@@ -22,7 +22,7 @@ def contact():
 
 @app.route('/items')
 def items():
-    with open('./data/items.json') as f:
+    with open('items.json') as f:
         data = json.load(f) # lecture des data json
         items_list = data.get('items', []) # récupération des valeurs liées à la clé 'items'
     return render_template('items.html', items=items_list) # envoie des items
