@@ -1,60 +1,21 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Product Display</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 70%;
-            margin: 20px auto;
-        }
-        th, td {
-            border: 1px solid #652c60;
-            padding: 8px 12px;
-            text-align: left;
-        }
-        th {
-            background-color: #ffccf0;
-        }
-        h1 {
-            text-align: center;
-        }
-        p.error {
-            text-align: center;
-            color: rgb(255, 0, 225);
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-    {% include 'header.html' %}
+{% extends "base.html" %}
 
-    <h1>Product List</h1>
-
-    {% if error %}
-        <p class="error">{{ error }}</p>
-    {% elif products %}
-        <table>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Category</th>
-                <th>Price</th>
-            </tr>
-            {% for product in products %}
-            <tr>
-                <td>{{ product.id }}</td>
-                <td>{{ product.name }}</td>
-                <td>{{ product.category }}</td>
-                <td>${{ "%.2f"|format(product.price) }}</td>
-            </tr>
-            {% endfor %}
-        </table>
-    {% else %}
-        <p style="text-align:center;">No products found.</p>
-    {% endif %}
-
-    {% include 'footer.html' %}
-</body>
-</html>
+{% block content %}
+<h1>Product List</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Price</th>
+    </tr>
+    {% for product in products %}
+    <tr>
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.category }}</td>
+        <td>${{ "%.2f"|format(product.price) }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

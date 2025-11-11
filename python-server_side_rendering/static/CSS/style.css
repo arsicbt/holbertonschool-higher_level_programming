@@ -1,0 +1,113 @@
+/* style.css */
+
+/* --- Reset et typographie --- */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family:  glober, Satoshi, 'Plus Jakarta Sans', 'Roboto Flex', sans-serif;
+    background-color: #ffffff;
+    color: #503b9a;
+}
+
+a {
+    text-decoration: none;
+    color: #503b9a;
+}
+
+.home img {
+    display: block;
+    margin: 10px auto 0 auto; /* centre l'image horizontalement */
+    width: 40%;   /* rétrécit l'image à 50% de la largeur du conteneur */
+    max-width: 100px; /* limite la largeur maximale */
+    height: auto; /* garde les proportions */
+}
+
+/* --- Navigation --- */
+nav {
+    background-color: #503b9a;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #f5f6fa;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #f5403f;
+    color: white;
+}
+
+/* --- Contenu principal --- */
+.content {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+
+/* --- Titres --- */
+h1 {
+    text-align: center;
+    color: #503b9a;
+    margin-bottom: 20px;
+}
+
+/* --- Tableaux produits --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #503b9a;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+    transition: background 0.3s;
+}
+
+/* --- Boutons (si besoin pour actions futures) --- */
+button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #f5403f;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #f5403f;
+}
+
+

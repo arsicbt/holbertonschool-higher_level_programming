@@ -58,7 +58,7 @@ def get_data_from_db():
 
 
 @app.route('/products')
-def show_products():
+def products():
     source = request.args.get('source', 'json').lower()
     product_id = request.args.get('id', type=int)
     error = None

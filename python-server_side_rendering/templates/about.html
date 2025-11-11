@@ -1,15 +1,14 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>My Flask App - About</title>
-</head>
-<body>
-    {% include 'header.html' %}
+{% extends "base.html" %}
 
-    <h1>About Us</h1>
-    <p>Here I learn how Jinja and Flask work together</p>
+{% block content %}
+<h1>About Us</h1>
+<p style="text-align:center; max-width: 700px; margin: 0 auto;">
+    Welcome to MyStore! We are dedicated to providing high-quality products
+    that make your life easier and more enjoyable. Our team works hard
+    to source the best items and ensure excellent customer service.
+</p>
 
-    {% include 'footer.html' %}
-</body>
-</html>
+<div style="text-align:center; margin-top:30px;">
+    <img src="https://via.placeholder.com/400x200" alt="About Us" style="border-radius:10px;">
+</div>
+{% endblock %}
